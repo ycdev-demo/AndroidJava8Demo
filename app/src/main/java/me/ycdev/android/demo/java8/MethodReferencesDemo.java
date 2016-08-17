@@ -9,10 +9,6 @@ public class MethodReferencesDemo {
     @FunctionalInterface
     public interface Transformer<F, T> {
         T transform(F obj);
-
-        static void test() {
-            // nothing to do
-        }
     }
 
     public static class Person {
