@@ -1,12 +1,13 @@
-package me.ycdev.android.demo.java8n;
+package me.ycdev.android.demo.java8;
 
-public class DefaultStatisMethodDemo {
-    public void showUsage() {
+class DefaultStatisMethodDemo {
+    void showUsage() {
         ItsAnInterface it = () -> System.out.println("fun");
         ItsAnInterface.bar(it);
     }
 }
 
+@FunctionalInterface
 interface ItsAnInterface {
     void fun();
 

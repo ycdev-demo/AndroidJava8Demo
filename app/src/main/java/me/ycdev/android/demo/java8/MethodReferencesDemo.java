@@ -5,28 +5,26 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-public class MethodReferencesDemo {
+class MethodReferencesDemo {
     @FunctionalInterface
     public interface Transformer<F, T> {
         T transform(F obj);
     }
 
     public static class Person {
-        public int age;
+        int age;
         public String name;
-
-        public Person() {}
 
         private Person(int age) {
             this.age = age;
             this.name = "P-" + age;
         }
 
-        public static Person convert(int age) {
+        static Person convert(int age) {
             return new Person(age);
         }
 
-        public int compareByAge(Person other) {
+        int compareByAge(Person other) {
             return age - other.age;
         }
 
@@ -36,21 +34,15 @@ public class MethodReferencesDemo {
         }
     }
 
-    public static class MyComparator {
-        public static int compare(Person lhs, Person rhs) {
-            return lhs.age - rhs.age;
-        }
-    }
-
-    public static <F, T> List<T> transform(List<F> list, Transformer<F, T> transformer) {
-        ArrayList<T> result = new ArrayList<T>(list.size());
+    private static <F, T> List<T> transform(List<F> list, Transformer<F, T> transformer) {
+        ArrayList<T> result = new ArrayList<>(list.size());
         for (F obj : list) {
             result.add(transformer.transform(obj));
         }
         return result;
     }
 
-    public void showUsage() {
+    void showUsage() {
         staticMethod();
         instanceMethod();
         typeMethod();

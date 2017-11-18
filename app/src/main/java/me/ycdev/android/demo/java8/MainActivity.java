@@ -15,5 +15,11 @@ public class MainActivity extends AppCompatActivity {
 
         findViewById(R.id.methodReference).setOnClickListener(
                 view -> new MethodReferencesDemo().showUsage());
+
+        findViewById(R.id.defaultStaticMethod).setOnClickListener(
+                view -> new DefaultStatisMethodDemo().showUsage());
+
+        findViewById(R.id.tryWithResources).setOnClickListener(
+                view -> new TryWithResourcesDemo().showUsage());
     }
 }

@@ -10,7 +10,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        findViewById(R.id.defaultStaticMethod).setOnClickListener(
-                view -> new DefaultStatisMethodDemo().showUsage());
+        findViewById(R.id.stream).setOnClickListener(view -> new StreamDemo().showUsage());
     }
 }

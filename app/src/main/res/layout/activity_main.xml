@@ -24,4 +24,18 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/lambda"
         android:text="Method Reference" />
+
+    <Button
+        android:id="@+id/defaultStaticMethod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/methodReference"
+        android:text="Default Static Method" />
+
+    <Button
+        android:id="@+id/tryWithResources"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/defaultStaticMethod"
+        android:text="Try With Resources" />
 </RelativeLayout>
